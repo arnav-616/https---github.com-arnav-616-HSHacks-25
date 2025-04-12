@@ -201,7 +201,7 @@ body{
 }
 
 button {
-    background-color: transparent;
+    background-color: #fff;
     border-color: transparent;
     transition: 0.8s;
 
