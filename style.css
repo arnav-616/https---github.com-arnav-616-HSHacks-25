@@ -99,39 +99,33 @@ body {
     z-index: -1;
   }
 
-  .earth .planet {
-    position: relative;
-  }
-  
-  /* Moon orbit path centered on Earth */
   .earth .moon-orbit {
     width: 6em;
     height: 6em;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(25%, 25%);
+    transform: translate(-50%, -50%);
     border: 1px dotted rgba(255, 255, 255, 0.25);
     border-radius: 50%;
     animation: orbit-moon 4s linear infinite;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
     pointer-events: none;
     z-index: 1;
   }
   
-  /* Moon itself */
   .moon {
     width: 1em;
     height: 1em;
-    position: justify;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    display: flex;
     align-items: center;
     justify-content: center;
   }
   
-  /* Moon image */
-  .moon .planet::before {
+  .moon::before {
     content: '';
     width: 1em;
     height: 1em;
@@ -143,7 +137,6 @@ body {
     top: 0;
     left: 0;
   }
-
 @keyframes orbit-moon {
   from { transform: translate(-50%, -50%) rotate(0deg); }
   to   { transform: translate(-50%, -50%) rotate(360deg); }
