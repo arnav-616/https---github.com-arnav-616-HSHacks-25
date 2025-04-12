@@ -25,32 +25,40 @@ body {
     position: absolute;
     z-index: 10;
     background: url('./images/sun1.png') no-repeat center/cover;
-    box-shadow: 0 0 3em rgb(255, 128, 0);
+    box-shadow: 0 0 3em orange;
   }
   
-  .mercury, .venus, .earth, .mars, .jupiter, .saturn, .uranus, .neptune {
+  .orbit {
     position: absolute;
+    border: 1px dotted rgba(255, 255, 255, 0.2);
     border-radius: 50%;
-    animation: orbit 50s linear infinite;
+    animation: orbit linear infinite;
     display: flex;
     align-items: center;
     justify-content: flex-start;
   }
   
-  .mercury { width: 14em; height: 14em; }
-  .venus   { width: 18em; height: 18em; }
-  .earth   { width: 22em; height: 22em; }
-  .mars    { width: 26em; height: 26em; }
-  .jupiter { width: 32em; height: 32em; }
-  .saturn  { width: 36em; height: 36em; }
-  .uranus  { width: 40em; height: 40em; }
-  .neptune { width: 45em; height: 45em; }
+  .planet {
+    position: absolute;
+    animation: orbit linear infinite;
+  }
   
+  /* Orbit Sizes */
+  .mercury { width: 14em; height: 14em; animation-duration: 10s; }
+  .venus   { width: 18em; height: 18em; animation-duration: 15s; }
+  .earth   { width: 22em; height: 22em; animation-duration: 20s; }
+  .mars    { width: 26em; height: 26em; animation-duration: 25s; }
+  jupiter { width: 32em; height: 32em; animation-duration: 30s; }
+  saturn  { width: 36em; height: 36em; animation-duration: 35s; }
+  uranus  { width: 40em; height: 40em; animation-duration: 40s; }
+  neptune { width: 45em; height: 45em; animation-duration: 45s; }
+  
+  /* Moon orbiting earth */
   .moon {
     width: 6em;
     height: 6em;
     position: absolute;
-    animation: orbit 5s linear infinite;
+    animation-duration: 5s;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -62,26 +70,35 @@ body {
     transform: translate(-50%, -50%);
   }
   
-  .mercury::before, .venus::before, .earth::before,
-  .moon::before, .mars::before, .jupiter::before,
-  .saturn::before, .uranus::before, .neptune::before {
+  /* Planet Images */
+  .mercury .planet::before,
+  .venus .planet::before,
+  .earth .planet::before,
+  .moon .planet::before,
+  .mars .planet::before,
+  .jupiter .planet::before,
+  .saturn .planet::before,
+  .uranus .planet::before,
+  .neptune .planet::before {
     content: '';
     position: absolute;
     border-radius: 50%;
     background-size: cover;
     background-repeat: no-repeat;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
   }
   
-  .mercury::before { width: 2em; height: 2em; background-image: url('./images/mercury.png'); }
-  .venus::before   { width: 2.5em; height: 2.5em; background-image: url('./images/venus.png'); }
-  .earth::before   { width: 3em; height: 3em; background-image: url('./images/earth.png'); }
-  .moon::before    { width: 1em; height: 1em; background-image: url('./images/moon.png'); }
-  .mars::before    { width: 2.5em; height: 2.5em; background-image: url('./images/mars.png'); }
-  jupiter::before { width: 4em; height: 4em; background-image: url('./images/jupiter.png'); }
-  saturn::before  { width: 4em; height: 4em; background-image: url('./images/saturn.png'); }
-  uranus::before  { width: 3em; height: 3em; background-image: url('./images/uranus.png'); }
-  neptune::before { width: 3em; height: 3em; background-image: url('./images/neptune.png'); }
+  .mercury .planet::before { width: 2em; height: 2em; background-image: url('./images/mercury.png'); }
+  .venus   .planet::before { width: 2.5em; height: 2.5em; background-image: url('./images/venus.png'); }
+  .earth   .planet::before { width: 3em; height: 3em; background-image: url('./images/earth.png'); }
+  .moon    .planet::before { width: 1em; height: 1em; background-image: url('./images/moon.png'); }
+  .mars    .planet::before { width: 2.5em; height: 2.5em; background-image: url('./images/mars.png'); }
+  .jupiter .planet::before { width: 4em; height: 4em; background-image: url('./images/jupiter.png'); }
+  .saturn  .planet::before { width: 4em; height: 4em; background-image: url('./images/saturn.png'); }
+  .uranus  .planet::before { width: 3em; height: 3em; background-image: url('./images/uranus.png'); }
+  .neptune .planet::before { width: 3em; height: 3em; background-image: url('./images/neptune.png'); }
   
   @keyframes orbit {
     from { transform: rotate(0deg); }
@@ -94,3 +111,5 @@ body {
     border-radius: 50%;
     z-index: -1;
   }
+  
+  
