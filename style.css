@@ -137,8 +137,8 @@ body {
     left: 0;
   }
 @keyframes orbit-moon {
-  from { transform: translate(-60%, -60%) rotate(0deg); }
-  to   { transform: translate(-60%, -60%) rotate(360deg); }
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to   { transform: translate(-50%, -50%) rotate(360deg); }
 }
   
 
