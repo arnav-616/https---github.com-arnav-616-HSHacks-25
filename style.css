@@ -250,29 +250,28 @@ animation: twinkle 2s infinite ease-in-out;
 }
 
 .navbar {
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-display: flex;
-justify-content: flex-start;
-background-color: transparent; /* or set a color if needed */
-z-index: 1000;
+  position: fixed; /* Stays at the top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px; /* Fixed height */
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+  z-index: 1000;
 }
 
 .navbar a {
-color: white;
-padding: 14px 20px;
-text-decoration: none;
-display: inline-block;
+  color: white;
+  text-decoration: none;
+  margin-right: 20px;
+  font-size: 16px;
+  padding: 10px 15px;
 }
 
 .navbar a:hover {
-background-color: #ddd;
-color: black;
-}
-
-/* Optional: Right-aligned link */
-.navbar a.right {
-margin-left: auto;
+  background-color: #ddd;
+  color: black;
 }
