@@ -52,16 +52,6 @@ body {
   .uranus  { width: 130em; height: 130em; animation-duration: 119s; }
   .neptune { width: 150em; height: 150em; animation-duration: 140s; }
   
-  /* Moon orbiting earth */
-  .moon {
-    width: 6em;
-    height: 6em;
-    position: absolute;
-    animation-duration: 5s;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-  }
   
   .earth .moon {
     top: 50%;
@@ -92,7 +82,6 @@ body {
   .mercury .planet::before { width: 2em; height: 2em; background-image: url('./images/mercury.png'); }
   .venus   .planet::before { width: 2.5em; height: 2.5em; background-image: url('./images/venus.png'); }
   .earth   .planet::before { width: 3em; height: 3em; background-image: url('./images/earth.png'); }
-  .moon    .planet::before { width: 1em; height: 1em; background-image: url('./images/moon.jpg'); }
   .mars    .planet::before { width: 2.5em; height: 2.5em; background-image: url('./images/mars.png'); }
   .jupiter .planet::before { width: 4em; height: 4em; background-image: url('./images/jupiter.png'); }
   .saturn  .planet::before { width: 4em; height: 4em; background-image: url('./images/saturn.png'); }
@@ -110,6 +99,44 @@ body {
     border-radius: 50%;
     z-index: -1;
   }
+
+  /* Moon orbit container */
+.moon-orbit {
+  width: 4em;
+  height: 4em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px dotted rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  animation: orbit-moon 4s linear infinite;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  pointer-events: none;
+}
+
+/* Moon appearance */
+.moon {
+  width: 1em;
+  height: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.moon .planet::before {
+  width: 1em;
+  height: 1em;
+  background-image: url('./images/moon.jpg');
+}
+
+/* Moon orbit animation */
+@keyframes orbit-moon {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to   { transform: translate(-50%, -50%) rotate(360deg); }
+}
 
   
 
