@@ -57,6 +57,13 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 1em;
+    height: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    
   }
   
   /* Planet Images */
@@ -110,7 +117,7 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(25%, 25%);
+    transform: translate(-50%, -50%);
     border: 1px dotted rgba(255, 255, 255, 0.25);
     border-radius: 50%;
     animation: orbit-moon 4s linear infinite;
