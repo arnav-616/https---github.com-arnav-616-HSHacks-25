@@ -1,10 +1,3 @@
-
-
-
-
-
-
-You said:
 body{
     margin: 0;
     height: 100vh;
@@ -206,22 +199,3 @@ body{
 
 }
 
-button {
-    background-color: transparent;
-    border-color: transparent;
-    transition: 0.8s;
-
-  }
-
-  .popup {
-    width: 400px;
-    background: #fff;
-    border-radius: 6px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    padding: 0 30px 30px; 
-    color: #333;
-  }
