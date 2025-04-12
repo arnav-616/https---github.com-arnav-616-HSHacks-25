@@ -12,7 +12,9 @@ body{
     font-size: 6px;
     width: 40em;
     height: 40em;
-    position: relative;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
 }
 
 .sun{
@@ -26,6 +28,96 @@ body{
     box-shadow: 0 0 3em rgb(255, 128, 0)
 }
 
+.mercury, .venus, .earth, .mars, .jupiter, .saturn, .uranus, .neptune{
+    position: absolute;
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+    border-radius: 0.1em 0.1em 0 0;
+    border-radius: 50%;
+ 
+}
+
+.mercury{
+    width: 3em;
+    height: 3em;
+    top: 4em;
+    left: 4em;
+    animation: orbit 50s linear infinite;
+}
+.earth{
+    width: 28em;
+    height: 28em;
+    top: 6em;
+    left: 6em;
+    animation: orbit 50s linear infinite;
+}
+
+.venus{
+    width: 20em;
+    height: 20em;
+    top: 12.5em;
+    left: 12.5em;
+    animation: orbit 50s linear infinite;
+}
+
+.moon{
+    width: 7em;
+    height: 7em;
+    top: 2em;
+    left: 2.5em;
+    animation: orbit 50s linear infinite;
+}
+
+.mars{
+    width: 36em;
+    height: 36em;
+    top: 2em;
+    left: 2.5em;
+    animation: orbit 50s linear infinite;
+}
+
+.jupiter{
+    width: 55em;
+    height: 55em;
+    top: -7em;
+    left: -7em;
+    animation: orbit 50s linear infinite;
+}
+
+.saturn{
+    width: 50em;
+    height: 50em;
+    top: -8em;
+    left: -8em;
+    animation: orbit 50s linear infinite;
+}
+
+.uranus{
+    width: 65em;
+    height: 65em;
+    top: -12em;
+    left: -12em;
+    animation: orbit 50s linear infinite;
+}
+
+.neptune{
+    width: -17em;
+    height: -17em;
+    top: 75em;
+    left: 75em;
+    animation: orbit 50s linear infinite;
+}
+
+.mercury::before, .venus::before, .earth::before, 
+.moon::before, .mars::before, .jupiter::before,
+ .saturn::before, .uranus::before, .neptune::before{
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    animation: orbit 50s linear infinite;
+ }
+
+ 
 .star{
     position: absolute;
     background-color: rgb(255, 248, 185);
@@ -33,3 +125,23 @@ body{
     z-index: -1;
 
 }
+
+button {
+    background-color: transparent;
+    border-color: transparent;
+    transition: 0.8s;
+
+  }
+
+  .popup {
+    width: 400px;
+    background: #fff;
+    border-radius: 6px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 0 30px 30px; 
+    color: #333;
+  }
