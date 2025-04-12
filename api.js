@@ -1,4 +1,4 @@
-// Use your API key here
+// Use your NASA API key here
 const NASA_API_KEY = "pNOwAOkZba3l8gLAcu9vghV7Kwi4mbFApNSxtFZs";
 
 // 1. APOD: Astronomy Picture of the Day
@@ -19,7 +19,6 @@ fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&
   .then(response => response.json())
   .then(data => {
     const photoContainer = document.getElementById("mars-photos");
-    // Show a few photos
     data.photos.slice(0, 5).forEach(photo => {
       const img = document.createElement("img");
       img.src = photo.img_src;
@@ -37,7 +36,6 @@ fetch(`https://api.nasa.gov/neo/rest/v1/feed?api_key=${NASA_API_KEY}`)
   .then(response => response.json())
   .then(data => {
     const list = document.getElementById("asteroid-list");
-    // Display data for the first date
     const dateKeys = Object.keys(data.near_earth_objects);
     if (dateKeys.length > 0) {
       const today = dateKeys[0];
