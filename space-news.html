@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Today's Space News</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 2em;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #000;
+      color: #fff;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 1em;
+    }
+
+    .news-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5em;
+    }
+
+    .article {
+      background-color: #111;
+      border-radius: 10px;
+      padding: 1em;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+      transition: transform 0.2s;
+    }
+
+    .article:hover {
+      transform: scale(1.02);
+    }
+
+    .article h2 {
+      font-size: 1.2em;
+      color: #00d8ff;
+    }
+
+    .article p {
+      font-size: 0.95em;
+      color: #ccc;
+    }
+
+    .article a {
+      color: #ffcc00;
+      text-decoration: none;
+    }
+
+    .article a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1>🚀 Today in Space News</h1>
+  <div class="news-container" id="news"></div>
+
+  <script>
+    const newsContainer = document.getElementById("news");
+
+    async function fetchSpaceNews() {
+      try {
+        const res = await fetch("https://api.spaceflightnewsapi.net/v4/articles/?limit=10");
+        const data = await res.json();
+        data.results.forEach(article => {
+          const articleDiv = document.createElement("div");
+          articleDiv.className = "article";
+          articleDiv.innerHTML = `
+            <h2>${article.title}</h2>
+            <p>${article.summary || "No summary available."}</p>
+            <a href="${article.url}" target="_blank">Read more</a>
+          `;
+          newsContainer.appendChild(articleDiv);
+        });
+      } catch (error) {
+        newsContainer.innerHTML = "<p>Failed to load space news 😢</p>";
+        console.error("Error fetching news:", error);
+      }
+    }
+
+    fetchSpaceNews();
+  </script>
+</body>
+</html>
