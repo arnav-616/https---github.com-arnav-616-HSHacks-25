@@ -100,8 +100,8 @@ body {
   }
 
   .earth .moon-orbit {
-    width: 6em;
-    height: 6em;
+    width: 4em;
+    height: 4em;
     position: absolute;
     top: 50%;
     left: 50%;
