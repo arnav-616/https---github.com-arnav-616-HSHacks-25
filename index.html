@@ -17,7 +17,6 @@
     <div class="orbit venus">
       <div class="planet"></div>
     </div>
-
   
     <div class="orbit earth">
       <div class="planet">
@@ -71,11 +70,40 @@
         <h3>Near-Earth Asteroids</h3>
         <ul id="asteroid-list"></ul>
       </section>
-    </div>
+    </div> 
+
+    <!-- Collapsible API Info Panel -->
+<div id="api-panel" class="minimized">
+  <div id="api-panel-header">
+    <button id="toggle-api-panel">NASA API Info</button>
+  </div>
+  <div id="api-panel-content">
+    <!-- APOD Section -->
+    <section class="apod-section">
+      <h3 id="apod-title">Loading APOD...</h3>
+      <img id="apod-img" src="" alt="APOD Image">
+      <p id="apod-desc"></p>
+    </section>
+    <!-- Mars Rover Photos Section -->
+    <section class="mars-section">
+      <h3>Mars Rover Photos</h3>
+      <div id="mars-photos"></div>
+    </section>
+    <!-- Near-Earth Asteroids Section -->
+    <section class="asteroid-section">
+      <h3>Near-Earth Asteroids</h3>
+      <ul id="asteroid-list"></ul>
+    </section>
+  </div>
+</div>
+
+
 
   </div>
 
+
+
   <script src="./script.js"></script>
-  <script src="api.js"></script>
+  <script src="api.html"></script>
 </body>
 </html>

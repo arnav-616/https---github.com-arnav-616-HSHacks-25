@@ -43,15 +43,55 @@ body {
   }
   
   /* Orbit Sizes */
-  .mercury { width: 10em; height: 10em; animation-duration: 15s; }
-  .venus   { width: 30em; height: 30em; animation-duration: 30s; }
-  .earth   { width: 50em; height: 50em; animation-duration: 45s; }
-  .moon    {width: 2em; heigth: 4em;}
-  .mars    { width: 70em; height: 70em; animation-duration: 56s; }
-  .jupiter { width: 90em; height: 90em; animation-duration: 70s; }
-  .saturn  { width: 120em; height: 110em; animation-duration: 92s; }
-  .uranus  { width:200em; height: 130em; animation-duration: 119s; }
-  .neptune { width: 280em; height: 150em; animation-duration: 140s; }
+/* Orbit Sizes + Different Start Points */
+.mercury {
+  width: 10em;
+  height: 10em;
+  animation-duration: 15s;
+  animation-delay: -2s;
+}
+.venus {
+  width: 30em;
+  height: 30em;
+  animation-duration: 30s;
+  animation-delay: -10s;
+}
+.earth {
+  width: 50em;
+  height: 50em;
+  animation-duration: 45s;
+  animation-delay: -5s;
+}
+.mars {
+  width: 70em;
+  height: 70em;
+  animation-duration: 56s;
+  animation-delay: -20s;
+}
+.jupiter {
+  width: 90em;
+  height: 90em;
+  animation-duration: 70s;
+  animation-delay: -35s;
+}
+.saturn {
+  width: 120em;
+  height: 110em;
+  animation-duration: 92s;
+  animation-delay: -60s;
+}
+.uranus {
+  width: 200em;
+  height: 130em;
+  animation-duration: 119s;
+  animation-delay: -50s;
+}
+.neptune {
+  width: 280em;
+  height: 150em;
+  animation-duration: 140s;
+  animation-delay: -70s;
+}
   
   
   .earth .moon {
@@ -101,17 +141,17 @@ body {
   }
 
   .earth .moon-orbit {
-    width: 6em;
-    height: 6em;
+    width: 3.5em;
+    height: 3.5em;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border: 1px dotted rgba(255, 255, 255, 0.25);
-    border-radius: 50%;
+    border-radius: 30%;
     animation: orbit-moon 4s linear infinite;
     pointer-events: none;
     z-index: 1;
+    justify-content: flex-start;
   }
   
   .moon {
@@ -183,6 +223,22 @@ body {
   .sun { width: 120px; height: 120px; }
   .moon { width: 60px; height: 60px; }
 }
+
+
+#iss-info {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 1em;
+  border-radius: 8px;
+  z-index: 1000;
+  font-family: sans-serif;
+  color: white;
+  max-width: 250px;
+}
+
+
   
 @keyframes twinkle {
   0%, 100% { opacity: 0.8; }
