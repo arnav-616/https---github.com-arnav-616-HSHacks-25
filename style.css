@@ -197,13 +197,3 @@ body {
     z-index: 2;
   }
 
-  
-@keyframes twinkle {
-    0%, 100% { opacity: 0.8; }
-    50% { opacity: 0.3; }
-  }
-  
-  .star {
-    animation: twinkle 2s infinite ease-in-out;
-  }
-  
