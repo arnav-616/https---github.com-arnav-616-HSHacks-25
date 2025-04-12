@@ -44,14 +44,14 @@ body {
   }
   
   /* Orbit Sizes */
-  .mercury { width: 18em; height: 18em; animation-duration: 15s; }
-  .venus   { width: 26em; height: 26em; animation-duration: 28s; }
-  .earth   { width: 37em; height: 37em; animation-duration: 36s; }
-  .mars    { width: 45em; height: 45em; animation-duration: 45s; }
-  .jupiter { width: 65em; height: 65em; animation-duration: 64s; }
-  .saturn  { width: 90em; height: 90em; animation-duration: 84s; }
-  .uranus  { width: 120em; height: 120em; animation-duration: 112s; }
- .neptune { width: 144em; height: 144em; animation-duration: 130s; }
+  .mercury { width: 14em; height: 14em; animation-duration: 10s; }
+  .venus   { width: 18em; height: 18em; animation-duration: 15s; }
+  .earth   { width: 22em; height: 22em; animation-duration: 20s; }
+  .mars    { width: 26em; height: 26em; animation-duration: 25s; }
+  jupiter { width: 32em; height: 32em; animation-duration: 30s; }
+  saturn  { width: 36em; height: 36em; animation-duration: 35s; }
+  uranus  { width: 40em; height: 40em; animation-duration: 40s; }
+  neptune { width: 45em; height: 45em; animation-duration: 45s; }
   
   /* Moon orbiting earth */
   .moon {
@@ -65,7 +65,7 @@ body {
   }
   
   .earth .moon {
-    top: 50%;
+    top: 0;
     left: 50%;
     transform: translate(-50%, -50%);
   }
@@ -93,7 +93,7 @@ body {
   .mercury .planet::before { width: 2em; height: 2em; background-image: url('./images/mercury.png'); }
   .venus   .planet::before { width: 2.5em; height: 2.5em; background-image: url('./images/venus.png'); }
   .earth   .planet::before { width: 3em; height: 3em; background-image: url('./images/earth.png'); }
-  .moon    .planet::before { width: 1em; height: 1em; background-image: url('./images/moon.png'); }
+  .moon    .planet::before { width: 1em; height: 1em; background-image: url('./images/moon.jpg'); }
   .mars    .planet::before { width: 2.5em; height: 2.5em; background-image: url('./images/mars.png'); }
   .jupiter .planet::before { width: 4em; height: 4em; background-image: url('./images/jupiter.png'); }
   .saturn  .planet::before { width: 4em; height: 4em; background-image: url('./images/saturn.png'); }
