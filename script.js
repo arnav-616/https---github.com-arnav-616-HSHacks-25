@@ -41,3 +41,28 @@ document.querySelectorAll('.planet').forEach(planetElement => {
     }
   });
 });
+
+
+// Function to fetch ISS current location
+async function fetchISSLocation() {
+  try {
+    const response = await fetch('http://api.open-notify.org/iss-now.json');
+    const data = await response.json();
+
+    if (data.message === 'success') {
+      const { latitude, longitude } = data.iss_position;
+      document.getElementById('iss-lat').textContent = latitude;
+      document.getElementById('iss-lon').textContent = longitude;
+    } else {
+      console.error('Failed to retrieve ISS data:', data);
+    }
+  } catch (error) {
+    console.error('Error fetching ISS location:', error);
+  }
+}
+
+// Initial fetch
+fetchISSLocation();
+
+// Update ISS location every 5 seconds
+setInterval(fetchISSLocation, 5000);
