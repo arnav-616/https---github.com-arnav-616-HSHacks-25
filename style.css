@@ -100,8 +100,8 @@ body {
   }
 
   .earth .moon-orbit {
-    width: 4em;
-    height: 4em;
+    width: 6em;
+    height: 6em;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -109,9 +109,6 @@ body {
     border: 1px dotted rgba(255, 255, 255, 0.25);
     border-radius: 50%;
     animation: orbit-moon 4s linear infinite;
-    display: flex; /* Push moon to edge */
-    align-items: center;
-    justify-content: flex-start;
     pointer-events: none;
     z-index: 1;
   }
@@ -119,10 +116,13 @@ body {
   .moon {
     width: 1em;
     height: 1em;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative; /* not absolute */
   }
   
   .moon::before {
