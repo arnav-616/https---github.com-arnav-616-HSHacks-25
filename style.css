@@ -46,7 +46,6 @@ body {
   .mercury { width: 10em; height: 10em; animation-duration: 15s; }
   .venus   { width: 30em; height: 30em; animation-duration: 30s; }
   .earth   { width: 50em; height: 50em; animation-duration: 45s; }
-  .moon    {width: 2em; heigth: 4em;}
   .mars    { width: 70em; height: 70em; animation-duration: 56s; }
   .jupiter { width: 90em; height: 90em; animation-duration: 70s; }
   .saturn  { width: 120em; height: 110em; animation-duration: 92s; }
