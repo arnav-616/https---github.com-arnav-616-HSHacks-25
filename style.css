@@ -125,6 +125,7 @@ body {
   .moon {
     width: 1em;
     height: 1em;
+    position: justify;
     align-items: center;
     justify-content: center;
   }
