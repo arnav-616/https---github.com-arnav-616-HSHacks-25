@@ -104,7 +104,7 @@ body {
   }
   
   /* Moon orbit path centered on Earth */
-  .moon-orbit {
+  .earth .moon-orbit {
     width: 6em;
     height: 6em;
     position: absolute;
