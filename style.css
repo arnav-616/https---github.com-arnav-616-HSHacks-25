@@ -44,14 +44,14 @@ body {
   }
   
   /* Orbit Sizes */
-  .mercury { width: 20em; height: 20em; animation-duration: 15s; }
-  .venus   { width: 40em; height: 40em; animation-duration: 30s; }
-  .earth   { width: 68em; height: 68em; animation-duration: 45s; }
-  .mars    { width: 100em; height: 100em; animation-duration: 56s; }
-  .jupiter { width: 150em; height: 150em; animation-duration: 70s; }
-  .saturn  { width: 220em; height: 220em; animation-duration: 92s; }
-  .uranus  { width: 300em; height: 300em; animation-duration: 119s; }
-  .neptune { width: 360em; height: 360em; animation-duration: 140s; }
+  .mercury { width: 10em; height: 10em; animation-duration: 15s; }
+  .venus   { width: 30em; height: 30em; animation-duration: 30s; }
+  .earth   { width: 50em; height: 50em; animation-duration: 45s; }
+  .mars    { width: 70em; height: 70em; animation-duration: 56s; }
+  .jupiter { width: 90em; height: 90em; animation-duration: 70s; }
+  .saturn  { width: 120em; height: 110em; animation-duration: 92s; }
+  .uranus  { width: 130em; height: 130em; animation-duration: 119s; }
+  .neptune { width: 150em; height: 150em; animation-duration: 140s; }
   
   /* Moon orbiting earth */
   .moon {
