@@ -67,29 +67,3 @@ fetchISSLocation();
 // Update ISS location every 5 seconds
 setInterval(fetchISSLocation, 5000);
 
-async function askPlanet() {
-  const question = document.getElementById('question').value;
-  const responseEl = document.getElementById('planet-response');
-  responseEl.textContent = "Thinking...";
-
-  const res = await fetch('https://api.openai.com/v1/chat/completions', {
-    method: 'POST',
-    headers: {
-      'Authorization': 'Bearer YOUR_OPENAI_API_KEY',
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({
-      model: "gpt-3.5-turbo",
-      messages: [{
-        role: "system",
-        content: "You are a witty, knowledgeable version of the planet Mars, answering questions as if you were the planet itself."
-      }, {
-        role: "user",
-        content: question
-      }]
-    })
-  });
-
-  const data = await res.json();
-  responseEl.textContent = data.choices[0].message.content;
-}
