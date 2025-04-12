@@ -105,12 +105,11 @@
       });
 
     // 2. Mars Rover Photos
-    // We fetch the photos from a specific sol (Martian day) for consistency; adjust the sol as needed.
     fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=${NASA_API_KEY}`)
       .then(response => response.json())
       .then(data => {
         const photoContainer = document.getElementById("mars-photos");
-        // Show a few photos (we slice the array; adjust the number as you like)
+        // Show a few photos; adjust the slice as needed.
         data.photos.slice(0, 5).forEach(photo => {
           const img = document.createElement("img");
           img.src = photo.img_src;
@@ -124,12 +123,11 @@
       });
 
     // 3. Near-Earth Asteroids (NeoWs)
-    // This API returns a feed keyed by date. We grab today's date key from the result.
     fetch(`https://api.nasa.gov/neo/rest/v1/feed?api_key=${NASA_API_KEY}`)
       .then(response => response.json())
       .then(data => {
         const list = document.getElementById("asteroid-list");
-        // Extract the first date key to display
+        // Extract the first date key to display asteroid info
         const dateKeys = Object.keys(data.near_earth_objects);
         if (dateKeys.length > 0) {
           const today = dateKeys[0];
