@@ -53,11 +53,16 @@ body {
   .neptune { width: 280em; height: 150em; animation-duration: 140s; }
   
   
+  .earth .moon {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
   /* Planet Images */
   .mercury .planet::before,
   .venus .planet::before,
   .earth .planet::before,
-  .moon .planet::before,
   .mars .planet::before,
   .jupiter .planet::before,
   .saturn .planet::before,
