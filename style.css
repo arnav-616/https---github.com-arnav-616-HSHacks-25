@@ -43,14 +43,55 @@ body {
   }
   
   /* Orbit Sizes */
-  .mercury { width: 10em; height: 10em; animation-duration: 15s; }
-  .venus   { width: 30em; height: 30em; animation-duration: 30s; }
-  .earth   { width: 50em; height: 50em; animation-duration: 45s; }
-  .mars    { width: 70em; height: 70em; animation-duration: 56s; }
-  .jupiter { width: 90em; height: 90em; animation-duration: 70s; }
-  .saturn  { width: 120em; height: 110em; animation-duration: 92s; }
-  .uranus  { width:200em; height: 130em; animation-duration: 119s; }
-  .neptune { width: 280em; height: 150em; animation-duration: 140s; }
+/* Orbit Sizes + Different Start Points */
+.mercury {
+  width: 10em;
+  height: 10em;
+  animation-duration: 15s;
+  animation-delay: -2s;
+}
+.venus {
+  width: 30em;
+  height: 30em;
+  animation-duration: 30s;
+  animation-delay: -10s;
+}
+.earth {
+  width: 50em;
+  height: 50em;
+  animation-duration: 45s;
+  animation-delay: -5s;
+}
+.mars {
+  width: 70em;
+  height: 70em;
+  animation-duration: 56s;
+  animation-delay: -20s;
+}
+.jupiter {
+  width: 90em;
+  height: 90em;
+  animation-duration: 70s;
+  animation-delay: -35s;
+}
+.saturn {
+  width: 120em;
+  height: 110em;
+  animation-duration: 92s;
+  animation-delay: -60s;
+}
+.uranus {
+  width: 200em;
+  height: 130em;
+  animation-duration: 119s;
+  animation-delay: -50s;
+}
+.neptune {
+  width: 280em;
+  height: 150em;
+  animation-duration: 140s;
+  animation-delay: -70s;
+}
   
   
   .earth .moon {
