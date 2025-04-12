@@ -92,54 +92,62 @@ body {
     to   { transform: rotate(360deg); }
   }
   
-/* Earth's planet must be the center */
-.earth .planet {
-  position: relative;
-  width: 3em;
-  height: 3em;
-}
-
-/* Orbit container centered on Earth */
-.moon-orbit {
-  width: 6em;
-  height: 6em;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border: 1px dotted rgba(255, 255, 255, 0.3);
-  border-radius: 50%;
-  animation: orbit-moon 4s linear infinite;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  z-index: 1;
-}
-
-/* The moon is at the edge of the orbit circle */
-.moon {
-  width: 1em;
-  height: 1em;
-  position: relative;
-}
-
-.moon .planet::before {
-  content: '';
-  width: 1em;
-  height: 1em;
-  background-image: url('./images/moon.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  border-radius: 50%;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-  @keyframes orbit-moon {
-    from { transform: translate(-50%, -50%) rotate(0deg); }
-    to   { transform: translate(-50%, -50%) rotate(360deg); }
+  .star {
+    position: absolute;
+    background-color: rgb(255, 248, 185);
+    border-radius: 50%;
+    z-index: -1;
   }
+
+  .earth .planet {
+    position: relative;
+  }
+  
+  /* Moon orbit path centered on Earth */
+  .moon-orbit {
+    width: 6em;
+    height: 6em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px dotted rgba(255, 255, 255, 0.25);
+    border-radius: 50%;
+    animation: orbit-moon 4s linear infinite;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    pointer-events: none;
+    z-index: 1;
+  }
+  
+  /* Moon itself */
+  .moon {
+    width: 1em;
+    height: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Moon image */
+  .moon .planet::before {
+    content: '';
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    background-image: url('./images/moon.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+@keyframes orbit-moon {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to   { transform: translate(-50%, -50%) rotate(360deg); }
+}
   
 
 
