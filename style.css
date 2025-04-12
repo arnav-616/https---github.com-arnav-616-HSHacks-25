@@ -135,7 +135,7 @@ button {
 
   .popup {
     width: 400px;
-    background: transparent;
+    background: #fff;
     border-radius: 6px;
     position: absolute;
     top: 50%;
