@@ -248,31 +248,3 @@ body {
 .star {
   animation: twinkle 2s infinite ease-in-out;
 }
-
-.navbar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  background-color: transparent; /* or set a color if needed */
-  z-index: 1000;
-}
-
-.navbar a {
-  color: white;
-  padding: 14px 20px;
-  text-decoration: none;
-  display: inline-block;
-}
-
-.navbar a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-/* Optional: Right-aligned link */
-.navbar a.right {
-  margin-left: auto;
-}
