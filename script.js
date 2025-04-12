@@ -66,10 +66,3 @@ fetchISSLocation();
 
 // Update ISS location every 5 seconds
 setInterval(fetchISSLocation, 5000);
-
-fetch("https://api.nasa.gov/planetary/apod?api_key=dWqKH0RfInxRE7ysRJmYPxAsSDWas3IqRej5tRo2")
-  .then(res => res.json())
-  .then(data => {
-    document.getElementById('apod-img').src = data.url;
-    document.getElementById('apod-desc').textContent = data.explanation;
-  });
