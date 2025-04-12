@@ -4,33 +4,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Solar System</title>
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
+    <!-- Sun (center) -->
     <div class="sun">
-      <button type="submit"></button>
-      <div class="popup">
-        <img class="sun" src="./images/sun1.png" alt="Sun">
-        <h2>Thank You!</h2>
-        <p>Your details have been successfully submitted. Thanks!</p>
-        <button type="button">OK</button>
+      <img class="sun-img" src="./images/sun1.png" alt="Sun">
+    </div>
+
+    <!-- Mercury Orbit -->
+    <div class="orbit mercury-orbit">
+      <div class="mercury planet"></div>
+    </div>
+
+    <!-- Venus Orbit -->
+    <div class="orbit venus-orbit">
+      <div class="venus planet"></div>
+    </div>
+
+    <!-- Earth Orbit (with Moon) -->
+    <div class="orbit earth-orbit">
+      <div class="earth planet">
+        <div class="orbit moon-orbit">
+          <div class="moon planet"></div>
+        </div>
       </div>
     </div>
-
-    <div class="mercury"></div>
-    <div class="venus"></div>
-    <div class="earth">
-      <div class="moon"></div>
-    </div>
-    <div class="mars"></div>
-    <div class="jupiter"></div>
-    <div class="saturn"></div>
-    <div class="uranus"></div>
-    <div class="neptune"></div>
-    <div class="pluto"></div>
   </div>
-
-  <script src="./script.js"></script>
 </body>
 </html>
