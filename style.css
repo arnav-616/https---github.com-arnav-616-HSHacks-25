@@ -48,10 +48,10 @@ body {
   .venus   { width: 18em; height: 18em; animation-duration: 15s; }
   .earth   { width: 22em; height: 22em; animation-duration: 20s; }
   .mars    { width: 26em; height: 26em; animation-duration: 25s; }
-  jupiter { width: 32em; height: 32em; animation-duration: 30s; }
-  saturn  { width: 36em; height: 36em; animation-duration: 35s; }
-  uranus  { width: 40em; height: 40em; animation-duration: 40s; }
-  neptune { width: 45em; height: 45em; animation-duration: 45s; }
+  .jupiter { width: 32em; height: 32em; animation-duration: 30s; }
+  .saturn  { width: 36em; height: 36em; animation-duration: 35s; }
+  .uranus  { width: 40em; height: 40em; animation-duration: 40s; }
+  .neptune { width: 45em; height: 45em; animation-duration: 45s; }
   
   /* Moon orbiting earth */
   .moon {
