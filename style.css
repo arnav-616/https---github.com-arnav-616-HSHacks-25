@@ -110,7 +110,7 @@ body {
     border-radius: 50%;
     animation: orbit-moon 4s linear infinite;
     pointer-events: none;
-    z-index: 2;
+    z-index: 1;
   }
   
   .moon {
@@ -118,8 +118,11 @@ body {
     height: 1em;
     position: absolute;
     top: 50%;
-    left: 0%;
+    left: 0;
     transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
   .moon::before {
