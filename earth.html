@@ -1,26 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Earth</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Planet Info</title>
+  <link rel="stylesheet" href="../style.css" />
 </head>
-
-
 <body>
-  <img style="width: 50em; height: 50em;" src="./images/earth.png" alt="earth_pic">
-
-  
-  <h3 style="color: white;">Earth:<br>
-    _______________________________________________________<br>
-    Position: 3rd<br>
-    Fun Fact: The only known planet with life<br>
-    Surface: 70% water, continents, and diverse ecosystems<br>
-    Atmosphere: Nitrogen and oxygen-rich, ideal for life<br>
-    Day Length: 24 hours<br>
-    Year Length: 365.25 days<br>
-    </h3>
-
-  <script src="./script.js"></script>
+  <div class="planet-info">
+    <h1 id="planet-name"></h1>
+    <img id="planet-img" src="" alt="Planet" />
+    <p id="planet-desc"></p>
+    <ul id="fun-facts"></ul>
+  </div>
+  <script src="../planet-loader.js"></script>
 </body>
-
 </html>
